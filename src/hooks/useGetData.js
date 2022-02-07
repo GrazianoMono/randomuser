@@ -1,11 +1,11 @@
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 
 const url = 'https://random-data-api.com/api/users/random_user?size=10'
 
 const initialFetchState = {
     loading: false,
     status: '',
-    data: {},
+    data: [],
     error: ''
 }
 
@@ -28,8 +28,8 @@ function reducer(state, action) {
 				loading: false,
 				error: action.error,
 			};
-        default:
-            return state
+		default:
+				return state
 	}
 }
 

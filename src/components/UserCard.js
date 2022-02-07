@@ -10,7 +10,7 @@ function UserCard({ avatar }) {
     );
 }
 
-UserCard.PropTypes = {
+UserCard.propTypes = {
     avatar: PropTypes.string
 };
 

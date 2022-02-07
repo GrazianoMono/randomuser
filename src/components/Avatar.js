@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import noImagePlaceHolder from "./assets/images/NoImagePlaceHolder.png";
+import noImagePlaceHolder from "../assets/images/NoImagePlaceHolder.png";
 
 function Avatar({ src }) {
     const image = src ?? noImagePlaceHolder;
@@ -12,7 +12,7 @@ function Avatar({ src }) {
     );
 }
 
-Avatar.PropTypes = {
+Avatar.propTypes = {
     src: PropTypes.string
 };
 

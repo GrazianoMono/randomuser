@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { useState } from "react";
 import "./index.scss";
 import useGetData from './hooks/useGetData.js'
 

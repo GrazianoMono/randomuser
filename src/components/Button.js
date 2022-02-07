@@ -9,7 +9,7 @@ function Button({ onClick, label }) {
     );
 }
 
-Button.PropTypes = {
+Button.propTypes = {
     onClick: PropTypes.func,
     label: PropTypes.string
 };

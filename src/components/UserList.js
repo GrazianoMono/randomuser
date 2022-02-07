@@ -3,18 +3,19 @@ import PropTypes from 'prop-types';
 import UserCard from './UserCard';
 
 function UserList({ items }) {
-    if (items.length === 0) return <p>No items...</p>
+    console.log(items)
+    if (!items || items.length === 0) return <p>No items...</p>
 
     return (
         <div className="user-list">
             {items.map(el => (
-                <UserCard avatar={el.avatar} />
+                <UserCard key={el.id} avatar={el.avatar} />
             ))}
         </div>
     );
 }
 
-UserList.PropTypes = {
+UserList.propTypes = {
     items: PropTypes.array
 };
 
