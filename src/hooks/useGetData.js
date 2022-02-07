@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-const url = 'https://random-data-api.com/api/users/random_user?size=10'
+const url = 'https://random-data-api.com/api/users/random_user?size=100'
 
 const initialFetchState = {
     loading: false,

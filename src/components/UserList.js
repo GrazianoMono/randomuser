@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import UserCard from './UserCard';
+import Loading from './Loading'
 
-function UserList({ items }) {
-    console.log(items)
+function UserList({ items, loading }) {
+    if(loading) return <Loading loading={loading}></Loading>
     if (!items || items.length === 0) return <p>No items...</p>
 
     return (

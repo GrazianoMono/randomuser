@@ -11,10 +11,9 @@ function App() {
 	const { state, fetchData } = useGetData()
 
     return (
-        <div>
+        <div className="hero">
             <Button onClick={fetchData} label="Fetch random Users" />
-			{state.loading && <span>Loading...</span>}
-			<UserList items={state.data} />
+			<UserList items={state.data} loading={state.loading}/>
         </div>
     );
 }
