@@ -1,5 +1,7 @@
 import { useEffect, useReducer } from "react";
 
+const url = 'https://random-data-api.com/api/users/random_user?size=10'
+
 const initialFetchState = {
     loading: false,
     status: '',
@@ -34,17 +36,17 @@ function reducer(state, action) {
 export default function useGetData(url) {
 	const [state, dispatch] = useReducer(reducer, initialFetchState);
 
-    dispatch({ type: 'loading' })
-    useEffect(() => {
-        fetch(url).then(res => {
-            if (res.ok) {
-                dispatch({type: 'success', data: res.json()})
-            } else throw new Error('Something went wrong')
-        }).catch(e => {
-            dispatch({ type: 'error', error: e})
-        })
+	const fetchData = async () => {
+		dispatch({ type: 'loading' })
+		try {
+			const res = await fetch(url)
+			const data = await res.json()
+			dispatch({type: 'success', data})
+		} catch (e) {
+			console.log(e)
+			dispatch({ type: 'error', error: e})
+		}
+	}
 
-    }, [url])
-
-    return state
+    return { state, fetchData }
 }
