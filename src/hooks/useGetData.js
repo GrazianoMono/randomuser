@@ -33,7 +33,7 @@ function reducer(state, action) {
 	}
 }
 
-export default function useGetData(url) {
+export default function useGetData() {
 	const [state, dispatch] = useReducer(reducer, initialFetchState);
 
 	const fetchData = async () => {
