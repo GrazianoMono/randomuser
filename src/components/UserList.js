@@ -9,7 +9,7 @@ function UserList({ items }) {
     return (
         <div className="user-list">
             {items.map(el => (
-                <UserCard key={el.id} avatar={el.avatar} />
+                <UserCard key={el.id} user={el}/>
             ))}
         </div>
     );
