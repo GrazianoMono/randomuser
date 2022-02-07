@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import UserCard from './UserCard';
 
 function UserList({ items }) {
     if (items.length === 0) return <p>No items...</p>
