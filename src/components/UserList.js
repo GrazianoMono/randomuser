@@ -13,7 +13,7 @@ function UserList({ items }) {
     );
 }
 
-UserCard.PropTypes = {
+UserList.PropTypes = {
     items: PropTypes.array
 };
 
